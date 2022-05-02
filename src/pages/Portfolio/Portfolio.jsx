@@ -1,27 +1,18 @@
 import { useState } from 'react';
+import projectList from '../../assets/json/project-list.json';
 import {
   Button,
   CardActions,
   CardContent,
-  Grid
+  Grid,
+  Typography
 } from '@mui/material';
-import { SectionBase } from '../../components';
-import {
-  ALS,
-  DGPRE,
-  FCAB,
-  VRIDTPaper
-} from './index';
+import { ProjectBase, SectionBase } from '../../components';
 import ProjectList from './ProjectList';
 
 function Portfolio () {
+  const [list] = useState(() => projectList.filter(d => d.featured));
   const [open, setOpen] = useState(false);
-  const projectList = [
-    ALS,
-    DGPRE,
-    FCAB,
-    VRIDTPaper,
-  ];
 
   const handleDialogOpen = () => {
     // Hide page scroller before open the modal.
@@ -50,14 +41,23 @@ function Portfolio () {
       <CardContent>
         <Grid spacing={2} container>
           {
-            projectList.map((Component, index) => (
+            list.map(project => (
               <Grid
-                key={`project-container-${index}`}
+                key={`project-container-${project.id}`}
                 xs={12}
                 md={6}
                 item
               >
-                <Component />
+                <ProjectBase
+                  name={project.name}
+                  year={project.endYear}
+                  companyLogo={project.companyImgUrl}
+                  techList={project.techList}
+                >
+                  <Typography align="justify" gutterBottom>
+                    { project.description }
+                  </Typography>
+                </ProjectBase>
               </Grid>
             ))
           }

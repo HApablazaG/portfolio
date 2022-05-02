@@ -14,7 +14,7 @@ function FCAB () {
     <ProjectBase
       name="FCAB"
       year="2020"
-      companyLogo="/images/logoFCAB.png"
+      companyLogo="/images/logo-fcab.png"
       techList={techList}
     >
       <Typography align="justify" gutterBottom>

@@ -13,7 +13,7 @@ function UCNEducation () {
     <ProjectBase
       name="SIVRIDT Educación Continua"
       year="2019"
-      companyLogo="/images/ucn_logo192.png"
+      companyLogo="/images/ucn-logo192.png"
       techList={techList}
     >
       <Typography align="justify" gutterBottom>

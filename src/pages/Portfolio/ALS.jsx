@@ -14,7 +14,7 @@ function ALS () {
     <ProjectBase
       name="Sistema de Gestión ALS"
       year="2022"
-      companyLogo="/images/logoALS.png"
+      companyLogo="/images/logo-als.png"
       techList={techList}
     >
       <Typography align="justify" gutterBottom>

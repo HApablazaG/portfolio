@@ -13,7 +13,7 @@ function VRIDTDonation () {
     <ProjectBase
       name="SIVRIDT Donaciones"
       year="2018"
-      companyLogo="/images/ucn_logo192.png"
+      companyLogo="/images/ucn-logo192.png"
       techList={techList}
     >
       <Typography align="justify" gutterBottom>

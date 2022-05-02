@@ -13,7 +13,7 @@ function DGPRE () {
     <ProjectBase
       name="DGPRE"
       year="2021"
-      companyLogo="/images/ucn_logo192.png"
+      companyLogo="/images/ucn-logo192.png"
       techList={techList}
     >
       <Typography align="justify" gutterBottom>

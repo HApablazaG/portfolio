@@ -43,7 +43,7 @@ function AboutMe () {
           <CardMedia
             sx={aboutStyles.cardMedia}
             component="img"
-            src="/images/person_avatar.png"
+            src="/images/person-avatar.png"
           />
         </Grid>
       </Grid>
