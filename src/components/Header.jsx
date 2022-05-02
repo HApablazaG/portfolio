@@ -55,7 +55,7 @@ function Header () {
         </Box>
 
         {
-          sizeMatch ? (
+          sizeMatch && (
             sectionList.map(section => (
               <Button
                 key={`link-to-${section.path}`}
@@ -67,7 +67,21 @@ function Header () {
                 { section.label }
               </Button>
             ))
-          ) : (
+          )
+        }
+
+        <Button
+          variant="outlined"
+          color="inherit"
+          component="a"
+          href="/CV-Hugo-Apablaza-Guerrero.pdf"
+          download
+        >
+          Curriculum
+        </Button>
+
+        {
+          !sizeMatch && (
             <IconButton
               // onClick={handleOpenNavMenu}
               color="inherit"
