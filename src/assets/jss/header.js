@@ -1,11 +1,12 @@
 const headerStyles = {
   toolbar: {
-    height: 100
+    height: 74
   },
   logoContainer: {
     flexGrow: 1
   },
   logo: theme => ({
+    display: 'block',
     fontSize: 55,
     color: theme.palette.primary.contrastText
   }),

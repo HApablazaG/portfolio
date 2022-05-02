@@ -1,3 +1,4 @@
+import externalLinks from '../assets/json/external-links.json';
 import {
   Button,
   CardActions,
@@ -27,7 +28,7 @@ function Contact () {
           <Button
             component="a"
             variant="outlined"
-            href="mailto:hapablazag@gmail.com"
+            href={`mailto:${externalLinks.email}`}
           >
             Enviar un mensaje
           </Button>

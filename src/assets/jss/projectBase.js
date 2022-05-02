@@ -8,12 +8,12 @@ const projectBaseStyles = {
   }),
   avatar: {
     alignItems: 'flex-start',
-    width: 80,
+    width: 100,
     height: 80,
+    marginLeft: 1,
     marginBottom: -2
   },
   avatarImg: {
-    height: 'auto',
     objectFit: 'contain'
   },
   divider: theme => ({

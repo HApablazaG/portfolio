@@ -1,6 +1,6 @@
 const homeStyles = {
   container: {
-    minHeight: `calc(100vh - 100px)`
+    minHeight: '100vh'
   },
   cardContainer: theme => ({
     backgroundColor: theme.palette.primary.dark,

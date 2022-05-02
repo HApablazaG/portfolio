@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import footerStyles from '../assets/jss/footer';
+import externalLinks from '../assets/json/external-links.json';
 import {
   MailOutline as EmailIcon,
   GitHub as GitHubIcon,
@@ -52,23 +53,23 @@ function Footer () {
       >
         <IconLink
           IconComponent={GitHubIcon}
-          link="https://github.com/HApablazaG"
+          link={externalLinks.github}
         />
 
         <IconLink
           IconComponent={LinkedInIcon}
-          link="https://www.linkedin.com/in/hapablazag"
+          link={externalLinks.linkedin}
         />
 
         <IconLink
           IconComponent={EmailIcon}
-          link="mailto:hapablazag@gmail.com"
+          link={`mailto:${externalLinks.email}`}
           target="_self"
         />
 
         <IconLink
           IconComponent={InstagramIcon}
-          link="https://www.instagram.com/hapablazag"
+          link={externalLinks.instagram}
         />
 
         <Grid xs={12} item>

@@ -48,7 +48,7 @@ function Header () {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar>
       <Toolbar sx={headerStyles.toolbar}>
         <Box sx={headerStyles.logoContainer}>
           <LogoIcon sx={headerStyles.logo} />

@@ -6,7 +6,7 @@
     "endYear": "2016",
     "company": "PACE UCN",
     "companyUrl": "https://paceucn.cl",
-    "companyImgUrl": "https://paceucn.cl/wp-content/uploads/2020/05/Normas-gra%CC%81ficas_Color.png",
+    "companyImgUrl": "/images/logo-pace.png",
     "description": "Sistema para apoyar los procesos de gestión desarrollados por el programa PACE. Permite el registro y seguimiento de los estudiantes a los que se les brinda apoyo academico, asi como de las distintas actividades realizadas y sus participantes. Implementa diversos reportes administrativos, según los requerimientos necesarios para responder a las consultas habituales por parte del ministerio de educación.",
     "techList": [
       "JQuery",
@@ -39,7 +39,7 @@
     "endYear": "2016",
     "company": "Ingeniería Gestión y Desarrollo S.A.",
     "companyUrl": "https://igdchile.com",
-    "companyImgUrl": "http://igdchile.com/wp-content/uploads/2018/06/igd_logo10fb.png",
+    "companyImgUrl": "/images/logo-igd.png",
     "description": "Actualización y termino del sistema de gestión e inventario interno de la empresa.",
     "techList": [
       "JQuery",
