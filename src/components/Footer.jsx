@@ -1,21 +1,23 @@
+import PropTypes from 'prop-types';
+import footerStyles from '../assets/jss/footer';
 import {
   MailOutline as EmailIcon,
   GitHub as GitHubIcon,
   Instagram as InstagramIcon,
-  LinkedIn as LinkedInIcon,
+  LinkedIn as LinkedInIcon
 } from '@mui/icons-material';
 import {
   AppBar,
   Grid,
   IconButton,
-  Typography,
+  Typography
 } from '@mui/material';
 
 function IconLink (props) {
   const { link, IconComponent, ...otherProps } = props;
 
   return (
-    <Grid sx={{ paddingX: 3 }} item>
+    <Grid sx={footerStyles.iconContainer} item>
       <IconButton
         component="a"
         target="_blank"
@@ -33,11 +35,17 @@ function IconLink (props) {
   );
 }
 
+// Define received props types for validation.
+IconLink.propTypes = {
+  link: PropTypes.string.isRequired,
+  IconComponent: PropTypes.elementType.isRequired
+};
+
 function Footer () {
   return (
     <AppBar position="static">
       <Grid
-        sx={{ padding: 2 }}
+        sx={footerStyles.container}
         spacing={1}
         justifyContent="center"
         container

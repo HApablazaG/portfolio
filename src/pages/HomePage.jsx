@@ -1,25 +1,23 @@
+import homeStyles from '../assets/jss/home';
 import {
   Card,
   CardContent,
   CardHeader,
   Grid,
-  Typography,
+  Typography
 } from '@mui/material';
 
 function HomePage () {
   return (
     <Grid
-      sx={{ minHeight: `calc(100vh - 100px)` }}
+      sx={homeStyles.container}
       alignItems="center"
       justifyContent="center"
       direction="column"
       container
     >
       <Card
-        sx={theme => ({
-          backgroundColor: theme.palette.primary.dark,
-          color: theme.palette.primary.contrastText,
-        })}
+        sx={homeStyles.cardContainer}
         elevation={0}
       >
         <Grid justifyContent="center" container>

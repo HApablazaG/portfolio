@@ -7,7 +7,7 @@ function ALS () {
     'React',
     'Koa.js',
     'PostgreSQL',
-    'Google API',
+    'Google API'
   ];
 
   return (

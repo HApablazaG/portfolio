@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
+import sectionBaseStyles from '../assets/jss/sectionBase';
 import {
   Box,
   Card,
-  CardHeader,
+  CardHeader
 } from '@mui/material';
 
 function SectionBase (props) {
@@ -10,25 +12,16 @@ function SectionBase (props) {
   return (
     <Box
       id={id}
-      sx={{
-        paddingTop: 10,
-        paddingBottom: 20,
-      }}
+      sx={sectionBaseStyles.container}
     >
       <Card
-        sx={theme => ({
-          backgroundColor: theme.palette.background.default,
-          borderRadius: 6
-        })}
+        sx={sectionBaseStyles.cardContainer}
         raised
       >
         <CardHeader
           title={title}
           titleTypographyProps={{
-            sx: theme => ({
-              marginBottom: 3,
-              color: theme.palette.secondary.dark
-            }),
+            sx: sectionBaseStyles.title,
             variant: 'h4',
             align: 'center',
           }}
@@ -39,5 +32,12 @@ function SectionBase (props) {
     </Box>
   );
 }
+
+// Define received props types for validation.
+SectionBase.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node
+};
 
 export default SectionBase;

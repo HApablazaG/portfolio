@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import projectListStyles from '../../assets/jss/projectList';
 import overlayScrollbars from 'overlayscrollbars';
 import {
   Box,
@@ -14,7 +16,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Tooltip,
+  Tooltip
 } from '@mui/material';
 
 function ProjectList () {
@@ -36,8 +38,8 @@ function ProjectList () {
         'JQuery',
         'Bootstrap',
         'PHP',
-        'MySQL',
-      ],
+        'MySQL'
+      ]
     },
     {
       id: 2016002,
@@ -55,8 +57,8 @@ function ProjectList () {
         'DC.js',
         'Bootstrap',
         'PHP',
-        'API externa',
-      ],
+        'API externa'
+      ]
     },
     {
       id: 2016003,
@@ -69,8 +71,8 @@ function ProjectList () {
       techList: [
         'JQuery',
         'PHP',
-        'MySQL',
-      ],
+        'MySQL'
+      ]
     },
     {
       id: 2017001,
@@ -88,8 +90,8 @@ function ProjectList () {
         'Javascript (ES6)',
         'React',
         'Express',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2018001,
@@ -105,8 +107,8 @@ function ProjectList () {
         'Javascript (ES6)',
         'React',
         'Express',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2018002,
@@ -123,8 +125,8 @@ function ProjectList () {
         'Javascript (ES6+)',
         'React',
         'Express',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2019001,
@@ -141,8 +143,8 @@ function ProjectList () {
       techList: [
         'JavaScript',
         'D3.js',
-        'API Rest',
-      ],
+        'API Rest'
+      ]
     },
     {
       id: 2019002,
@@ -160,8 +162,8 @@ function ProjectList () {
         'Javascript (ES6+)',
         'React',
         'Express',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2020001,
@@ -179,8 +181,8 @@ function ProjectList () {
         'React',
         'Koa.js',
         'PostgreSQL',
-        'Python',
-      ],
+        'Python'
+      ]
     },
     {
       id: 2020002,
@@ -200,8 +202,8 @@ function ProjectList () {
         'Koa.js',
         'PostgreSQL',
         'React Native',
-        'SQLite',
-      ],
+        'SQLite'
+      ]
     },
     {
       id: 2021001,
@@ -218,8 +220,8 @@ function ProjectList () {
         'Javascript (ES6+)',
         'React',
         'Koa.js',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2021002,
@@ -236,9 +238,8 @@ function ProjectList () {
       techList: [
         'Javascript',
         'PHP',
-        'PostgreSQL',
-        // 'SQL Server',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2021003,
@@ -259,8 +260,8 @@ function ProjectList () {
         'PostgreSQL',
         'React Native',
         'SQLite',
-        'Process Maker',
-      ],
+        'Process Maker'
+      ]
     },
     {
       id: 2021004,
@@ -277,8 +278,8 @@ function ProjectList () {
         'Javascript (ES6+)',
         'React',
         'Koa.js',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
     {
       id: 2022001,
@@ -297,8 +298,8 @@ function ProjectList () {
         'Javascript (ES6+)',
         'React',
         'Koa.js',
-        'PostgreSQL',
-      ],
+        'PostgreSQL'
+      ]
     },
   ]);
 
@@ -308,7 +309,7 @@ function ProjectList () {
 
     if (elements && elements.length > 0) {
       overlayScrollbars(elements[0], {
-        className: 'os-theme-light',
+        className: 'os-theme-light'
       });
     }
   }, []);
@@ -316,14 +317,7 @@ function ProjectList () {
   return (
     <TableContainer component={Paper} square>
       <Table>
-        <TableHead
-          sx={theme => ({
-            backgroundColor: theme.palette.primary.main,
-            '& th': {
-              color: theme.palette.primary.contrastText,
-            }
-          })}
-        >
+        <TableHead sx={projectListStyles.listHeader}>
           <TableRow>
             <TableCell>Nombre</TableCell>
 
@@ -342,7 +336,7 @@ function ProjectList () {
             projectList.map(project => (
               <TableRow
                 key={project.id}
-                sx={{ '&:last-child td': { border: 0 } }}
+                sx={projectListStyles.listRow}
               >
                 <TableCell>{ project.name }</TableCell>
 
@@ -359,11 +353,7 @@ function ProjectList () {
                     >
                       <Box
                         component="img"
-                        sx={{
-                          width: 80,
-                          height: 'auto',
-                          objectFit: 'contain',
-                        }}
+                        sx={projectListStyles.listIcon}
                         variant="square"
                         src={project.companyImgUrl}
                       />
@@ -417,5 +407,11 @@ function ModalContainer (props) {
     </Dialog>
   );
 }
+
+// Define received props types for validation.
+ModalContainer.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired
+};
 
 export default ModalContainer;

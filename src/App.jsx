@@ -4,13 +4,13 @@ import overlayScrollbars from 'overlayscrollbars';
 import { Box } from '@mui/material';
 import {
   Footer,
-  Header,
+  Header
 } from './components';
 import {
   AboutMe,
   Contact,
   HomePage,
-  Portfolio,
+  Portfolio
 } from './pages';
 
 function App () {

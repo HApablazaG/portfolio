@@ -1,8 +1,9 @@
+import aboutStyles from '../assets/jss/about';
 import {
   CardContent,
   CardMedia,
   Grid,
-  Typography,
+  Typography
 } from '@mui/material';
 import { SectionBase } from '../components';
 
@@ -34,16 +35,13 @@ function AboutMe () {
         </Grid>
 
         <Grid
-          sx={{ display: 'flex' }}
+          sx={aboutStyles.mediaCointainer}
           xs={12}
           md={5}
           item
         >
           <CardMedia
-            sx={{
-              width: 200,
-              margin: 'auto',
-            }}
+            sx={aboutStyles.cardMedia}
             component="img"
             src="/images/person_avatar.png"
           />

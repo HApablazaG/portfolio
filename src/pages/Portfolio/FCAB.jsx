@@ -7,7 +7,7 @@ function FCAB () {
     'React',
     'Koa.js',
     'PostgreSQL',
-    'Python',
+    'Python'
   ];
 
   return (

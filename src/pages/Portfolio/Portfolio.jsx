@@ -3,14 +3,14 @@ import {
   Button,
   CardActions,
   CardContent,
-  Grid,
+  Grid
 } from '@mui/material';
 import { SectionBase } from '../../components';
 import {
   ALS,
   DGPRE,
   FCAB,
-  VRIDTPaper,
+  VRIDTPaper
 } from './index';
 import ProjectList from './ProjectList';
 

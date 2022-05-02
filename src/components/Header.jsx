@@ -1,16 +1,15 @@
 import { useState } from 'react';
+import headerStyles from '../assets/jss/header';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import {
-  Menu as MenuIcon,
-} from '@mui/icons-material';
+import { Menu as MenuIcon } from '@mui/icons-material';
 import LogoIcon from './LogoIcon';
 import {
   AppBar,
   Box,
   Button,
   IconButton,
-  Toolbar,
+  Toolbar
 } from '@mui/material';
 
 function Header () {
@@ -50,14 +49,9 @@ function Header () {
 
   return (
     <AppBar position="static">
-      <Toolbar sx={{ height: 100 }}>
-        <Box sx={{ flexGrow: 1 }}>
-          <LogoIcon
-            sx={theme => ({
-              fontSize: 55,
-              color: theme.palette.primary.contrastText
-            })}
-          />
+      <Toolbar sx={headerStyles.toolbar}>
+        <Box sx={headerStyles.logoContainer}>
+          <LogoIcon sx={headerStyles.logo} />
         </Box>
 
         {
@@ -65,7 +59,7 @@ function Header () {
             sectionList.map(section => (
               <Button
                 key={`link-to-${section.path}`}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={headerStyles.sectionButton}
                 component="a"
                 href={section.path}
                 onClick={handleOnClick}

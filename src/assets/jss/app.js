@@ -3,8 +3,8 @@ const appStyles = {
     backgroundColor: theme.palette.primary.dark,
     paddingX: theme.spacing(12),
     [theme.breakpoints.down('md')]: {
-      paddingX: theme.spacing(2),
-    },
+      paddingX: theme.spacing(2)
+    }
   })
 };
 

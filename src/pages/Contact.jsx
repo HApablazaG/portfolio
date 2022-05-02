@@ -3,7 +3,7 @@ import {
   CardActions,
   CardContent,
   Grid,
-  Typography,
+  Typography
 } from '@mui/material';
 import { SectionBase } from '../components';
 

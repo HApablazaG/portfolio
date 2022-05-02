@@ -6,7 +6,7 @@ function DGPRE () {
     'Javascript (ES6+)',
     'React',
     'Koa.js',
-    'PostgreSQL',
+    'PostgreSQL'
   ];
 
   return (

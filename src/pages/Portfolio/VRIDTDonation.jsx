@@ -6,7 +6,7 @@ function VRIDTDonation () {
     'Javascript (ES6)',
     'React',
     'Express',
-    'PostgreSQL',
+    'PostgreSQL'
   ];
 
   return (
