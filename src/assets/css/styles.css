@@ -1,0 +1,3 @@
+html.os-html > .os-host > .os-scrollbar {
+  z-index: 999;
+}

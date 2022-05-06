@@ -1,34 +1,23 @@
 import { useState } from 'react';
 import headerStyles from '../assets/jss/header';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { Menu as MenuIcon } from '@mui/icons-material';
+import {
+  Close as CloseIcon,
+  Menu as MenuIcon
+} from '@mui/icons-material';
 import LogoIcon from './LogoIcon';
 import {
-  AppBar,
-  Box,
   Button,
+  Divider,
+  Drawer,
+  Grid,
   IconButton,
-  Toolbar
+  List,
+  ListItem,
+  ListItemText
 } from '@mui/material';
 
-function Header () {
-  const [sectionList] = useState(() => [
-    {
-      label: 'Acerca de mí',
-      path: '#about'
-    },
-    {
-      label: 'Portafolio',
-      path: '#portfolio'
-    },
-    {
-      label: 'Contacto',
-      path: '#contact'
-    }
-  ]);
-  const theme = useTheme();
-  const sizeMatch = useMediaQuery(theme.breakpoints.up('sm'));
+function Menu (props) {
+  const { open, onClose, menuList } = props;
 
   /**
    * Fix to scroll-behavior: 'smooth' problem with OverlayScrollbars.
@@ -48,28 +37,50 @@ function Header () {
   };
 
   return (
-    <AppBar>
-      <Toolbar sx={headerStyles.toolbar}>
-        <Box sx={headerStyles.logoContainer}>
-          <LogoIcon sx={headerStyles.logo} />
-        </Box>
+    <Drawer
+      anchor="top"
+      variant="persistent"
+      PaperProps={{
+        sx: headerStyles.menuContainer
+      }}
+      open={open}
+      onClose={onClose}
+    >
+      <IconButton
+        sx={headerStyles.closeIcon}
+        onClick={onClose}
+      >
+        <CloseIcon />
+      </IconButton>
 
+      <List>
         {
-          sizeMatch && (
-            sectionList.map(section => (
-              <Button
-                key={`link-to-${section.path}`}
-                sx={headerStyles.sectionButton}
-                component="a"
-                href={section.path}
-                onClick={handleOnClick}
-              >
-                { section.label }
-              </Button>
-            ))
-          )
+          menuList.map(section => (
+            <ListItem
+              key={`link-to-${section.path}`}
+              component="a"
+              href={section.path}
+              onClick={handleOnClick}
+              button
+            >
+              <ListItemText
+                primary={section.label}
+                primaryTypographyProps={{
+                  align: 'center'
+                }}
+              />
+            </ListItem>
+          ))
         }
+      </List>
 
+      <Divider />
+
+      <Grid
+        sx={headerStyles.menuFooterContainer}
+        justifyContent="center"
+        container
+      >
         <Button
           variant="outlined"
           color="inherit"
@@ -79,19 +90,52 @@ function Header () {
         >
           Curriculum
         </Button>
+      </Grid>
+    </Drawer>
+  );
+}
 
-        {
-          !sizeMatch && (
-            <IconButton
-              // onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-          )
-        }
-      </Toolbar>
-    </AppBar>
+function Header () {
+  const [open, setOpen] = useState(false);
+  const [sectionList] = useState(() => [
+    {
+      label: 'Acerca de mí',
+      path: '#about'
+    },
+    {
+      label: 'Portafolio',
+      path: '#portfolio'
+    },
+    {
+      label: 'Contacto',
+      path: '#contact'
+    }
+  ]);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+
+  return (
+    <>
+      <LogoIcon sx={headerStyles.logo} />
+
+      <IconButton
+        sx={headerStyles.menuIcon}
+        onClick={handleDrawerOpen}
+      >
+        <MenuIcon />
+      </IconButton>
+
+      <Menu
+        open={open}
+        onClose={handleDrawerClose}
+        menuList={sectionList}
+      />
+    </>
   );
 }
 

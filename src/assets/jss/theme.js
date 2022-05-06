@@ -10,7 +10,7 @@ const theme = {
       light: '#8BF6FF',
       main: '#4FC3F7',
       dark: '#0093C4',
-      contrastText: '#000'
+      contrastText: '#FFF'
     },
     background: {
       default: '#E0E0E0'
