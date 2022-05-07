@@ -4,7 +4,10 @@ const footerStyles = {
   },
   iconContainer: {
     paddingX: 3
-  }
+  },
+  mediaIcon: theme => ({
+    color: theme.palette.primary.contrastText
+  })
 };
 
 export default footerStyles;
