@@ -1,16 +1,18 @@
 import { FOOTER_HEIGHT } from './theme';
 
 const sectionBaseStyles = {
-  container: ({ theme, sectionName }) => ({
+  container: ({ theme, id }) => ({
     minHeight:
-      sectionName === 'contact'
+      id === 'contact'
         ? `calc(100vh - ${FOOTER_HEIGHT}px)`
         : '100vh',
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down('md')]: {
-      padding: theme.spacing(2.5)
-    }
+    // paddingY: theme.spacing(5),
+    // paddingX: theme.spacing(5),
+    // [theme.breakpoints.down('md')]: {
+    //   paddingY: theme.spacing(2.5),
+    //   paddingX: theme.spacing(1.5),
+    // }
   }),
   title: theme => ({
     marginBottom: 3,

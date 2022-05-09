@@ -62,9 +62,9 @@ function Menu (props) {
         {
           menuList.map(section => (
             <ListItem
-              key={`link-to-${section.path}`}
+              key={`link-to-${section.id}`}
               component="a"
-              href={section.path}
+              href={`#${section.id}`}
               onClick={handleOnClick}
               button
             >
@@ -108,22 +108,8 @@ Menu.propTypes = {
   menuList: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
-function Header () {
+function Header (props) {
   const [open, setOpen] = useState(false);
-  const [sectionList] = useState(() => [
-    {
-      label: 'Perfil',
-      path: '#about'
-    },
-    {
-      label: 'Portafolio',
-      path: '#portfolio'
-    },
-    {
-      label: 'Contacto',
-      path: '#contact'
-    }
-  ]);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -146,7 +132,7 @@ function Header () {
       <Menu
         open={open}
         onClose={handleDrawerClose}
-        menuList={sectionList}
+        {...props}
       />
     </>
   );

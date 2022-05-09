@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import aboutStyles from '../assets/jss/about';
-import photoImage from '../assets/images/photo.png';
+import photoImage from '../assets/images/photo.webp';
 import {
   CardContent,
   CardMedia,
@@ -8,9 +9,11 @@ import {
 } from '@mui/material';
 import { MediaLinkContainer, SectionBase } from '../components';
 
-function AboutMe () {
+function AboutMe (props) {
+  const { id } = props;
+
   return (
-    <SectionBase id="about" title="Acerca de mí">
+    <SectionBase id={id} title="Acerca de mí">
       <Grid justifyContent="space-evenly" container>
         <Grid xs={12} md={6} item>
           <CardContent>
@@ -84,5 +87,10 @@ function AboutMe () {
     </SectionBase>
   );
 }
+
+// Define received props types for validation.
+AboutMe.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default AboutMe;

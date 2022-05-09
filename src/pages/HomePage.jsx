@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import homeStyles from '../assets/jss/home';
 import {
   CardContent,
@@ -7,9 +8,12 @@ import {
   Typography
 } from '@mui/material';
 
-function HomePage () {
+function HomePage (props) {
+  const { id } = props;
+
   return (
     <Grid
+      id={id}
       sx={homeStyles.container}
       alignItems="center"
       container
@@ -51,5 +55,10 @@ function HomePage () {
     </Grid>
   );
 }
+
+// Define received props types for validation.
+HomePage.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default HomePage;

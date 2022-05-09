@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import externalLinks from '../assets/json/external-links.json';
 import { Send as SendIcon } from '@mui/icons-material';
 import {
@@ -9,9 +10,11 @@ import {
 } from '@mui/material';
 import { SectionBase } from '../components';
 
-function Contact () {
+function Contact (props) {
+  const { id } = props;
+
   return (
-    <SectionBase id="contact" title="Conversemos" nextIsFooter>
+    <SectionBase id={id} title="Conversemos" nextIsFooter>
       <Grid alignItems="center" container>
         <Grid xs={12} md={8} item>
           <CardContent>
@@ -45,5 +48,10 @@ function Contact () {
     </SectionBase>
   );
 }
+
+// Define received props types for validation.
+Contact.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default Contact;

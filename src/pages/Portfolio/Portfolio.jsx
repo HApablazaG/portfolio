@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import projectList from '../../assets/json/project-list.json';
 import sliderStyles from '../../assets/jss/slider';
 import {
@@ -19,7 +20,8 @@ import { ProjectBase, SectionBase } from '../../components';
 
 const StyledSwiper = styled(Swiper)(sliderStyles.root);
 
-function Portfolio () {
+function Portfolio (props) {
+  const { id } = props;
   const [swiperRef, setSwiperRef] = useState(null);
   const [state, setState] = useState(() => ({
     featuredOnly: true,
@@ -48,7 +50,7 @@ function Portfolio () {
 
   return (
     <SectionBase
-      id="portfolio"
+      id={id}
       title={
         featuredOnly
           ? 'Proyectos Destacados'
@@ -110,5 +112,10 @@ function Portfolio () {
     </SectionBase>
   );
 }
+
+// Define received props types for validation.
+Portfolio.propTypes = {
+  id: PropTypes.string.isRequired
+};
 
 export default Portfolio;

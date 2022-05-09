@@ -7,10 +7,7 @@ import {
   Grid
 } from '@mui/material';
 
-const StyledContainer = styled(
-  Grid,
-  { shouldForwardProp: prop => prop !== 'sectionName' }
-)(sectionBaseStyles.container);
+const StyledContainer = styled(Grid,)(sectionBaseStyles.container);
 
 function SectionBase (props) {
   const { id, title, children } = props;
@@ -18,7 +15,6 @@ function SectionBase (props) {
   return (
     <StyledContainer
       id={id}
-      sectionName={id}
       alignItems="center"
       container
     >

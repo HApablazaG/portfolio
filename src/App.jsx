@@ -1,15 +1,44 @@
-import { useEffect } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import overlayScrollbars from 'overlayscrollbars';
 import { Divider } from '@mui/material';
 import { Footer, Header } from './components';
 import {
   AboutMe,
   Contact,
+  ExperienceTimeLine,
   HomePage,
   Portfolio
 } from './pages';
 
 function App () {
+  const [siteSchema] = useState(() => [
+    {
+      id: 'home',
+      label: 'Inicio',
+      Component: HomePage
+    },
+    {
+      id: 'about',
+      label: 'Perfil',
+      Component: AboutMe
+    },
+    {
+      id: 'experience',
+      label: 'Experiencia',
+      Component: ExperienceTimeLine
+    },
+    {
+      id: 'portfolio',
+      label: 'Portafolio',
+      Component: Portfolio
+    },
+    {
+      id: 'contact',
+      label: 'Contacto',
+      Component: Contact
+    }
+  ]);
+
   useEffect(() => {
     // Init styled scroller on body element.
     let elements = document.getElementsByTagName('body');
@@ -28,24 +57,22 @@ function App () {
       element?.scrollIntoView({
         behavior: 'smooth'
       });
-    }, 300);
+    }, 350);
   }, []);
 
   return (
     <>
-      <Header />
+      <Header menuList={siteSchema} />
 
-      <HomePage />
+      {
+        siteSchema.map(({ id, Component }, index) => (
+          <Fragment key={id}>
+            { index !== 0 && <Divider /> }
 
-      <AboutMe />
-
-      <Divider />
-
-      <Portfolio />
-
-      <Divider />
-
-      <Contact />
+            <Component id={id} />
+          </Fragment>
+        ))
+      }
 
       <Footer />
     </>
