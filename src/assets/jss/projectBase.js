@@ -1,7 +1,11 @@
 const projectBaseStyles = {
   cardContainer: theme => ({
-    backgroundColor: theme.palette.secondary.main,
-    color: theme.palette.common.white
+    // backgroundColor: theme.palette.secondary.main,
+    color: theme.palette.common.white,
+    paddingX: theme.spacing(5),
+    [theme.breakpoints.down('md')]: {
+      paddingX: theme.spacing(3)
+    }
   }),
   subheader: theme => ({
     color: theme.palette.common.white

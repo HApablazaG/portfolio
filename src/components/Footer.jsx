@@ -8,9 +8,12 @@ import { MediaLinkContainer } from './index';
 
 function Footer () {
   return (
-    <AppBar component="footer" position="static">
+    <AppBar
+      sx={footerStyles.container}
+      component="footer"
+      position="static"
+    >
       <Grid
-        sx={footerStyles.container}
         spacing={1}
         justifyContent="center"
         container

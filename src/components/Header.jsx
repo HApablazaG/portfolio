@@ -1,6 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import headerStyles from '../assets/jss/header';
 import {
+  AttachFile as AttachFileIcon,
   Close as CloseIcon,
   Menu as MenuIcon
 } from '@mui/icons-material';
@@ -34,6 +36,9 @@ function Menu (props) {
         element.style.scrollBehavior = 'auto';
       }, 50);
     }
+
+    // Close menu on button click.
+    onClose();
   };
 
   return (
@@ -84,6 +89,7 @@ function Menu (props) {
         <Button
           variant="outlined"
           color="inherit"
+          startIcon={<AttachFileIcon />}
           component="a"
           href="/CV-Hugo-Apablaza-Guerrero.pdf"
           download
@@ -95,11 +101,18 @@ function Menu (props) {
   );
 }
 
+// Define received props types for validation.
+Menu.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  menuList: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
 function Header () {
   const [open, setOpen] = useState(false);
   const [sectionList] = useState(() => [
     {
-      label: 'Acerca de mí',
+      label: 'Perfil',
       path: '#about'
     },
     {

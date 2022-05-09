@@ -8,6 +8,9 @@ import App from './App';
 
 // Add css styles.
 import 'overlayscrollbars/css/OverlayScrollbars.min.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import './assets/css/styles.css';
 
 const root = createRoot(document.getElementById('root'));

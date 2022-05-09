@@ -1,84 +1,112 @@
 import { useState } from 'react';
 import projectList from '../../assets/json/project-list.json';
+import sliderStyles from '../../assets/jss/slider';
+import {
+  Visibility as VisibilityIcon,
+  VisibilityOff as VisibilityOffIcon,
+} from '@mui/icons-material';
 import {
   Button,
+  Card,
   CardActions,
-  CardContent,
   Grid,
+  styled,
   Typography
 } from '@mui/material';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper';
 import { ProjectBase, SectionBase } from '../../components';
-import ProjectList from './ProjectList';
+
+const StyledSwiper = styled(Swiper)(sliderStyles.root);
 
 function Portfolio () {
-  const [list] = useState(() => projectList.filter(d => d.featured));
-  const [open, setOpen] = useState(false);
+  const [swiperRef, setSwiperRef] = useState(null);
+  const [state, setState] = useState(() => ({
+    featuredOnly: true,
+    list: projectList.filter(d => d.featured)
+  }));
 
-  const handleDialogOpen = () => {
-    // Hide page scroller before open the modal.
-    let elements = document.getElementsByClassName('os-scrollbar-vertical');
-    if (elements && elements.length > 0) {
-      elements[0].style.visibility = 'hidden';
+  const { featuredOnly, list } = state;
+
+  const toggleList = () => {
+    let newState = {
+      featuredOnly: !featuredOnly,
+      list: featuredOnly ? projectList : projectList.filter(d => d.featured)
+    };
+    setState(newState);
+
+    if (swiperRef) {
+      const current = list[swiperRef.realIndex];
+      let newIndex = newState.list.findIndex(d => d.id === current.id);
+      newIndex = newIndex === -1 ? 0 : newIndex;
+      swiperRef.slideTo(newIndex, 0);
+
+      // Resolve bug of realIndex not updating.
+      swiperRef.realIndex = newIndex;
     }
-
-    // Open the modal.
-    setOpen(true);
-  };
-
-  const handleDialogClose = () => {
-    // Restore the visibility for the page scroller before closing the modal.
-    let elements = document.getElementsByClassName('os-scrollbar-vertical');
-    if (elements && elements.length > 0) {
-      elements[0].style.visibility = 'visible';
-    }
-
-    // Hide the modal.
-    setOpen(false);
   };
 
   return (
-    <SectionBase id="portfolio" title="Proyectos Destacados">
-      <CardContent>
-        <Grid spacing={2} container>
-          {
-            list.map(project => (
-              <Grid
-                key={`project-container-${project.id}`}
-                xs={12}
-                md={6}
-                item
+    <SectionBase
+      id="portfolio"
+      title={
+        featuredOnly
+          ? 'Proyectos Destacados'
+          : 'Histórico de Proyectos'
+      }
+    >
+      <StyledSwiper
+        onSwiper={setSwiperRef}
+        slidesPerView="auto"
+        spaceBetween={30}
+        modules={[Pagination, Navigation]}
+        pagination={{ clickable: true }}
+        centeredSlides
+        navigation
+        loop
+      >
+        <Card
+          sx={sliderStyles.contentContainer}
+          slot="container-start"
+        />
+
+        {
+          list.map(project => (
+            <SwiperSlide key={`project-container-${project.id}`}>
+              <ProjectBase
+                name={project.name}
+                year={project.endYear}
+                companyLogo={project.companyImgUrl}
+                techList={project.techList}
               >
-                <ProjectBase
-                  name={project.name}
-                  year={project.endYear}
-                  companyLogo={project.companyImgUrl}
-                  techList={project.techList}
-                >
-                  <Typography align="justify" gutterBottom>
-                    { project.description }
-                  </Typography>
-                </ProjectBase>
-              </Grid>
-            ))
-          }
-        </Grid>
-      </CardContent>
+                <Typography align="justify" gutterBottom>
+                  { project.description }
+                </Typography>
+              </ProjectBase>
+            </SwiperSlide>
+          ))
+        }
+      </StyledSwiper>
 
       <CardActions>
         <Grid justifyContent="center" container>
           <Button
             variant="outlined"
-            onClick={handleDialogOpen}
+            startIcon={
+              featuredOnly
+                ? <VisibilityIcon />
+                : <VisibilityOffIcon />
+            }
+            onClick={toggleList}
           >
-            Ver todos los proyectos
+            {
+              featuredOnly
+                ? 'Ver todos'
+                : 'Ver solo destacados'
+            }
           </Button>
         </Grid>
       </CardActions>
-
-      <ProjectList
-        open={open}
-        onClose={handleDialogClose}
-      />
     </SectionBase>
   );
 }

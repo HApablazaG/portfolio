@@ -1,4 +1,5 @@
 import aboutStyles from '../assets/jss/about';
+import photoImage from '../assets/images/photo.png';
 import {
   CardContent,
   CardMedia,
@@ -68,7 +69,7 @@ function AboutMe () {
               <CardMedia
                 sx={aboutStyles.cardMedia}
                 component="img"
-                src="/images/person-avatar.png"
+                src={photoImage}
               />
             </Grid>
 

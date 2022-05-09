@@ -2,8 +2,7 @@ import PropTypes from 'prop-types';
 import projectBaseStyles from '../assets/jss/projectBase';
 import {
   Avatar,
-  Card,
-  CardActionArea,
+  Box,
   CardContent,
   CardHeader,
   Divider,
@@ -14,11 +13,7 @@ function ProjectBase (props) {
   const { name, year, companyLogo, techList, children } = props;
 
   return (
-    <Card
-      sx={projectBaseStyles.cardContainer}
-      square
-    >
-      <CardActionArea>
+    <Box sx={projectBaseStyles.cardContainer}>
         <CardHeader
           title={name}
           subheader={year}
@@ -51,8 +46,7 @@ function ProjectBase (props) {
         >
           { techList?.join(' | ') }
         </Typography>
-      </CardActionArea>
-    </Card>
+    </Box>
   );
 }
 

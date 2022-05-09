@@ -1,4 +1,5 @@
 import externalLinks from '../assets/json/external-links.json';
+import { Send as SendIcon } from '@mui/icons-material';
 import {
   Button,
   CardActions,
@@ -10,30 +11,37 @@ import { SectionBase } from '../components';
 
 function Contact () {
   return (
-    <SectionBase id="contact" title="Contacto">
-      <CardContent>
-        <Typography paragraph>
-          ¿Quieres ponerte en contacto conmigo?
-        </Typography>
+    <SectionBase id="contact" title="Conversemos" nextIsFooter>
+      <Grid alignItems="center" container>
+        <Grid xs={12} md={8} item>
+          <CardContent>
+            <Typography paragraph>
+              ¿Quieres ponerte en contacto conmigo?
+            </Typography>
 
-        <Typography align="justify">
-          Si te intereso mi trabajo y deseas comunicarte conmigo no dudes en hacerlo,
-          actualmente me encuentro en la busqueda de nuevas oportunidades laborales por lo
-          que estare más que encantado de atender tus mensajes o preguntas.
-        </Typography>
-      </CardContent>
-
-      <CardActions>
-        <Grid justifyContent="center" container>
-          <Button
-            component="a"
-            variant="outlined"
-            href={`mailto:${externalLinks.email}`}
-          >
-            Enviar un mensaje
-          </Button>
+            <Typography align="justify">
+              Si te intereso mi trabajo y deseas comunicarte conmigo no dudes en hacerlo,
+              actualmente me encuentro en la busqueda de nuevas oportunidades laborales por lo
+              que estare más que encantado de atender tus mensajes o preguntas.
+            </Typography>
+          </CardContent>
         </Grid>
-      </CardActions>
+
+        <Grid xs={12} md={4} item>
+          <CardActions>
+            <Grid justifyContent="center" container>
+              <Button
+                component="a"
+                variant="outlined"
+                startIcon={<SendIcon />}
+                href={`mailto:${externalLinks.email}`}
+              >
+                Enviar mensaje
+              </Button>
+            </Grid>
+          </CardActions>
+        </Grid>
+      </Grid>
     </SectionBase>
   );
 }

@@ -1,11 +1,7 @@
 import { useEffect } from 'react';
-import appStyles from './assets/jss/app';
 import overlayScrollbars from 'overlayscrollbars';
-import { Box } from '@mui/material';
-import {
-  Footer,
-  Header
-} from './components';
+import { Divider } from '@mui/material';
+import { Footer, Header } from './components';
 import {
   AboutMe,
   Contact,
@@ -20,7 +16,7 @@ function App () {
 
     if (elements.length > 0) {
       overlayScrollbars(elements[0], {
-        className: 'os-theme-light',
+        className: 'os-theme-dark',
       });
     }
 
@@ -32,22 +28,24 @@ function App () {
       element?.scrollIntoView({
         behavior: 'smooth'
       });
-    }, 150);
+    }, 300);
   }, []);
 
   return (
     <>
       <Header />
 
-      <Box sx={appStyles.container}>
-        <HomePage />
+      <HomePage />
 
-        <AboutMe />
+      <AboutMe />
 
-        <Portfolio />
+      <Divider />
 
-        <Contact />
-      </Box>
+      <Portfolio />
+
+      <Divider />
+
+      <Contact />
 
       <Footer />
     </>

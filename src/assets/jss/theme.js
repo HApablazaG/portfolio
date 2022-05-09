@@ -1,3 +1,5 @@
+const FOOTER_HEIGHT = 115;
+
 const theme = {
   palette: {
     primary: {
@@ -17,5 +19,7 @@ const theme = {
     }
   }
 };
+
+export { FOOTER_HEIGHT };
 
 export default theme;

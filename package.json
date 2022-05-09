@@ -1,7 +1,7 @@
 {
   "homepage": "https://hapablazag.dev",
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "My personal portfolio",
   "main": "src/index.js",
   "scripts": {
@@ -32,6 +32,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
+    "swiper": "^8.1.4",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {

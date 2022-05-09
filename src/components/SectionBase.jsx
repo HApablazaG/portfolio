@@ -1,22 +1,31 @@
 import PropTypes from 'prop-types';
 import sectionBaseStyles from '../assets/jss/sectionBase';
+import { styled } from '@mui/material/styles';
 import {
-  Box,
-  Card,
-  CardHeader
+  CardHeader,
+  Container,
+  Grid
 } from '@mui/material';
+
+const StyledContainer = styled(
+  Grid,
+  { shouldForwardProp: prop => prop !== 'sectionName' }
+)(sectionBaseStyles.container);
 
 function SectionBase (props) {
   const { id, title, children } = props;
 
   return (
-    <Box
+    <StyledContainer
       id={id}
-      sx={sectionBaseStyles.container}
+      sectionName={id}
+      alignItems="center"
+      container
     >
-      <Card
-        sx={sectionBaseStyles.cardContainer}
-        raised
+      <Grid
+        component={Container}
+        justifyContent="center"
+        container
       >
         <CardHeader
           title={title}
@@ -28,8 +37,8 @@ function SectionBase (props) {
         />
 
         { children }
-      </Card>
-    </Box>
+      </Grid>
+    </StyledContainer>
   );
 }
 
