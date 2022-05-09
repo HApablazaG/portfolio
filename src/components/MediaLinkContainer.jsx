@@ -20,6 +20,7 @@ function IconLink (props) {
   return (
     <Grid sx={linkStyles} item>
       <IconButton
+        aria-label="Media Link"
         component="a"
         target="_blank"
         href={link}

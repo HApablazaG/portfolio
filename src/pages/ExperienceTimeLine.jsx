@@ -202,12 +202,12 @@ function ExperienceTimeLine (props) {
   ]);
   const [selected, setSelected] = useState(contentList[0]);
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('sm'));
+  const matches = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <SectionBase id={id} title="Experiencia Laboral">
       <Grid alignItems="center" container>
-        <Grid xs={3} md={6} item>
+        <Grid xs={3} md={2} lg={6} item>
           <Timeline position="left">
             {
               contentList.map(content => {
@@ -246,7 +246,7 @@ function ExperienceTimeLine (props) {
                           imgProps={{
                             sx: experienceStyles.avatarImg
                           }}
-                          alt="dot-company-logo"
+                          alt={`Logo ${content.company}`}
                           src={content.logoImg}
                         />
                       </StyledButton>
@@ -274,7 +274,7 @@ function ExperienceTimeLine (props) {
           </Timeline>
         </Grid>
 
-        <Grid xs={9} md={6} item>
+        <Grid xs={9} md={10} lg={6} item>
           <Card>
             <CardHeader
               title={selected.position}
@@ -290,7 +290,7 @@ function ExperienceTimeLine (props) {
                     sx: experienceStyles.avatarImg
                   }}
                   variant="square"
-                  alt="selected-company-logo"
+                  alt={`Logo ${selected.company}`}
                   src={selected.logoImg}
                 />
               )}

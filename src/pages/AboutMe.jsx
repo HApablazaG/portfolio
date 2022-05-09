@@ -72,6 +72,7 @@ function AboutMe (props) {
               <CardMedia
                 sx={aboutStyles.cardMedia}
                 component="img"
+                alt="Hugo Apablaza"
                 src={photoImage}
               />
             </Grid>

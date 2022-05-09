@@ -52,6 +52,7 @@ function Menu (props) {
       onClose={onClose}
     >
       <IconButton
+        aria-label="Close Menu"
         sx={headerStyles.closeIcon}
         onClick={onClose}
       >
@@ -62,6 +63,7 @@ function Menu (props) {
         {
           menuList.map(section => (
             <ListItem
+              aria-label={`Go To Section ${section.id}`}
               key={`link-to-${section.id}`}
               component="a"
               href={`#${section.id}`}
@@ -87,6 +89,7 @@ function Menu (props) {
         container
       >
         <Button
+          aria-label="Download Resume"
           variant="outlined"
           color="inherit"
           startIcon={<AttachFileIcon />}
@@ -123,6 +126,7 @@ function Header (props) {
       <LogoIcon sx={headerStyles.logo} />
 
       <IconButton
+        aria-label="Open Menu"
         sx={headerStyles.menuIcon}
         onClick={handleDrawerOpen}
       >

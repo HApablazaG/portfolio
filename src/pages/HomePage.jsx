@@ -31,7 +31,7 @@ function HomePage (props) {
               </Typography>
             )}
             subheader={(
-              <Typography variant="h3" color="secondary">
+              <Typography variant="h3" color="secondary.light">
                 Hugo Apablaza Guerrero
               </Typography>
             )}

@@ -64,6 +64,7 @@ function Portfolio (props) {
         modules={[Pagination, Navigation]}
         pagination={{ clickable: true }}
         centeredSlides
+        autoHeight
         navigation
         loop
       >
@@ -78,6 +79,7 @@ function Portfolio (props) {
               <ProjectBase
                 name={project.name}
                 year={project.endYear}
+                company={project.company}
                 companyLogo={project.companyImgUrl}
                 techList={project.techList}
               >

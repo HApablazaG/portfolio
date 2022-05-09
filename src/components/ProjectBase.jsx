@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 
 function ProjectBase (props) {
-  const { name, year, companyLogo, techList, children } = props;
+  const { name, year, company, companyLogo, techList, children } = props;
 
   return (
     <Box sx={projectBaseStyles.cardContainer}>
@@ -24,8 +24,9 @@ function ProjectBase (props) {
             <Avatar
               sx={projectBaseStyles.avatar}
               imgProps={{
-                sx: projectBaseStyles.avatarImg
+                sx: projectBaseStyles.avatarImg,
               }}
+              alt={`Logo ${company}`}
               variant="square"
               src={companyLogo}
             />
@@ -57,6 +58,7 @@ ProjectBase.propTypes = {
     PropTypes.string,
     PropTypes.number
   ]).isRequired,
+  company: PropTypes.string.isRequired,
   companyLogo: PropTypes.string.isRequired,
   techList: PropTypes.arrayOf(PropTypes.string).isRequired,
   children: PropTypes.node
