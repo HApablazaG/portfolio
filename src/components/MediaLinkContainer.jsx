@@ -3,7 +3,6 @@ import externalLinks from '../assets/json/external-links.json';
 import {
   MailOutline as EmailIcon,
   GitHub as GitHubIcon,
-  Instagram as InstagramIcon,
   LinkedIn as LinkedInIcon
 } from '@mui/icons-material';
 import { Grid, IconButton } from '@mui/material';
@@ -68,12 +67,6 @@ function MediaLinkContainer (props) {
         IconComponent={EmailIcon}
         link={`mailto:${externalLinks.email}`}
         target="_self"
-        {...props}
-      />
-
-      <IconLink
-        IconComponent={InstagramIcon}
-        link={externalLinks.instagram}
         {...props}
       />
     </>
