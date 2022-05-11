@@ -64,14 +64,14 @@ function getContent (contentId) {
             component="ul"
           >
             <Typography component="li" align="justify">
-              Refactorización del código existente, el cual en su mayoria era código
+              Refactorización del código existente, el cual en su mayoría era código
               autogenerado por Dreamweaver (la herramienta utilizada para su desarrollo
               inicialmente).
             </Typography>
 
             <Typography component="li" align="justify">
               Rediseño de la interfaz de usuario para darle un aspecto más moderno y acorde
-              a los estandares del momento.
+              a los estándares del momento.
             </Typography>
 
             <Typography component="li" align="justify">
@@ -87,7 +87,7 @@ function getContent (contentId) {
           component="ul"
         >
           <Typography component="li" align="justify">
-            Desarrollo de sistemas web internos utilizando React.js, JSS y JavaScript(ES6+)
+            Desarrollo de sistemas web internos utilizando React.js, JSS y JavaScript (ES6+)
             como front-end, en conjunto con Node.js, Express y PostgreSQL como back-end.
           </Typography>
 
@@ -97,7 +97,7 @@ function getContent (contentId) {
           </Typography>
 
           <Typography component="li" align="justify">
-            Desarrollo externo para la compañia FCAB con el objectivo de actualizar su
+            Desarrollo externo para la compañía FCAB con el objetivo de actualizar su
             sistema de seguimiento de trenes.
           </Typography>
         </Box>
@@ -114,12 +114,12 @@ function getContent (contentId) {
           </Typography>
 
           <Typography component="li" align="justify">
-            En algunos casos támbien se desarrollo una aplicación movíl (ios y android)
-            utilizando React Native complementaria al web.
+            En algunos casos también se desarrolló una aplicación móvil (iOS y Android)
+            utilizando React Native complementaria al sistema web.
           </Typography>
 
           <Typography component="li" align="justify">
-            Control de versiones del código utilizando git. Támbien asignado como el
+            Control de versiones del código utilizando git. También asignado como el
             responsable de revisar el código previo a cualquier merge para asegurar su
             funcionalidad y calidad.
           </Typography>
@@ -147,7 +147,7 @@ function getContent (contentId) {
 
             <Typography component="li" align="justify">
               Calendarización de los eventos importantes, utilizando la API de Google para
-              generar automaticamente la invitación y enviarla a los participantes asociados.
+              generar automáticamente la invitación y enviarla a los participantes asociados.
             </Typography>
 
             <Typography component="li" align="justify">

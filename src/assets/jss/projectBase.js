@@ -10,13 +10,15 @@ const projectBaseStyles = {
   subheader: theme => ({
     color: theme.palette.common.white
   }),
-  avatar: {
+  avatar: theme => ({
     alignItems: 'flex-start',
     width: 100,
     height: 80,
     marginLeft: 1,
-    marginBottom: -2
-  },
+    marginBottom: -2,
+    backgroundColor: theme.palette.primary.contrastText,
+    borderRadius: theme.spacing(1)
+  }),
   avatarImg: {
     objectFit: 'contain'
   },

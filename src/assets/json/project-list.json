@@ -7,7 +7,7 @@
     "company": "PACE UCN",
     "companyUrl": "https://paceucn.cl",
     "companyImgUrl": "/images/logo-pace.png",
-    "description": "Sistema para apoyar los procesos de gestión desarrollados por el programa PACE. Permite el registro y seguimiento de los estudiantes a los que se les brinda apoyo academico, asi como de las distintas actividades realizadas y sus participantes. Implementa diversos reportes administrativos, según los requerimientos necesarios para responder a las consultas habituales por parte del ministerio de educación.",
+    "description": "Sistema para apoyar los procesos de gestión desarrollados por el programa PACE. Permite el registro y seguimiento de los estudiantes a los que se les brinda apoyo académico, así como de las distintas actividades realizadas y sus participantes. Implementa diversos reportes administrativos, según los requerimientos necesarios para responder a las consultas habituales por parte del ministerio de educación.",
     "techList": [
       "JQuery",
       "Bootstrap",
@@ -23,7 +23,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "Sistema desarrollado para escuela de ingenieria, con el objetivo de implementar reportes graficos para la visualización de los distintos indicadores clave de rendimiento definidos.",
+    "description": "Sistema desarrollado para la escuela de ingeniería, con el objetivo de implementar reportes gráficos para la visualización de los distintos indicadores clave de rendimiento definidos.",
     "techList": [
       "JavaScript",
       "DC.js",
@@ -40,7 +40,7 @@
     "company": "Ingeniería Gestión y Desarrollo S.A.",
     "companyUrl": "https://igdchile.com",
     "companyImgUrl": "/images/logo-igd.png",
-    "description": "Actualización y termino del sistema de gestión e inventario interno de la empresa.",
+    "description": "Actualización y termino del sistema de gestión e inventario interno de la empresa. Debido a que para el desarrollo anterior se había llevado a cabo utilizando la herramienta Dreamweaver fue necesario realizar una refactorización completa del código, para mejorar escalabilidad y calidad general para mantenciones futuras, así como un rediseño completo a la interfaz de usuario para darle un estilo más moderno y acorde a los estándares del momento.",
     "techList": [
       "JQuery",
       "PHP",
@@ -55,7 +55,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "La universidad tiene como uno de sus objetivos el impulsar las publicaciones realizadas por académicos en revistas de investigación reconocidas. Para ello se comprometio a implementar un sistema web para facilitar la inscripción de dichas publicaciones, asi como simplificar el proceso de pago de los incentivos monetarios asociados.",
+    "description": "La universidad tiene como uno de sus objetivos el impulsar las publicaciones realizadas por académicos en revistas de investigación reconocidas. Para ello se comprometió a implementar un sistema web para facilitar la inscripción de dichas publicaciones, así como simplificar el proceso de pago de los incentivos monetarios asociados. El sistema también presenta varios reportes para entregar la información requerida a las consultas más comunes que deben responder los encargados.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -71,7 +71,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "El proyecto tiene como objetivo facilitar el proceso de registro y seguimiento de los proyectos financiados a travez de donaciones externas.",
+    "description": "El proyecto tiene como objetivo facilitar el proceso de registro y seguimiento de los proyectos financiados a través de donaciones externas. El proyecto sigue las intenciones de la universidad para fomentar y facilitar el trabajo de los académicos asociados a proyectos de investigación.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -118,7 +118,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "El proyecto tiene como objetivo facilitar el proceso de registro de los distintos planes de formación existentes (cursos, diplomados, etc.) e impartidos por la universidad. Asi como tambien la ejecución del mismo, permitiendo el ingreso de la información más relevante para reportabilidad.",
+    "description": "El proyecto tiene como objetivo facilitar el proceso de registro de los distintos planes de formación existentes (cursos, diplomados, etc.) e impartidos por la universidad. Así como también la ejecución del mismo, permitiendo el ingreso de la información más relevante para reportabilidad.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -134,7 +134,7 @@
     "company": "FCAB",
     "companyUrl": "https://www.fcab.cl",
     "companyImgUrl": "/images/logo-fcab.png",
-    "description": "Realizado con el objetivo de mejorar el sistema actual para la proyección del recorrido realizado por los trenes a disposición de la empresa, con el fin de utilizar de manera optima la (única) via ferrea existente para ello.",
+    "description": "Realizado con el objetivo de mejorar el sistema actual para la proyección del recorrido realizado por los trenes a disposición de la empresa, con el fin de utilizar de manera óptima la (única) vía férrea existente para ello.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -169,7 +169,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "Con el fin de retomar la implementación del sistema para apoyar en el proceso de prácticas (detenido debido a cambios en la administración de la facultad) se solicitaron diversos cambios y mejoras para simplificar el proceso general.",
+    "description": "Con el fin de retomar la implementación del sistema para apoyar en el proceso de prácticas (detenido debido a cambios en la administración de la facultad) se solicitaron diversos cambios y mejoras para simplificar el proceso general y fomentar su uso a través de una marcha blanca.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -185,7 +185,7 @@
     "company": "FCAB",
     "companyUrl": "https://www.fcab.cl",
     "companyImgUrl": "/images/logo-fcab.png",
-    "description": "Gracias a la confianza adquirida en los desarrollos previos, en está ocasión se encargo la actualización del sistema para control de asistencia de los operadores de trenes con el proposito de optimizar los tiempos de respuesta del sistema e incorporar mejoras al sistema existente.",
+    "description": "Gracias a la confianza adquirida en los desarrollos previos, en esta ocasión se encargó la actualización del sistema para control de asistencia de los operadores de trenes con el propósito de optimizar los tiempos de respuesta del sistema e incorporar mejoras al sistema existente.",
     "techList": [
       "Javascript",
       "PHP",
@@ -200,7 +200,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "El objetivo del sistema es facilitar el proceso de calificación de estudiantes de medicina en las distintas especiales ofrecidas por la universidad. El sistema permite diseñar las rubricas de evaluación a travez de un sistema de administración web y completarlas por los docentes con la aplicación móvil para IOS y Android.",
+    "description": "El objetivo del sistema es facilitar el proceso de calificación de estudiantes de medicina en las distintas especiales ofrecidas por la universidad. El sistema permite diseñar las rubricas de evaluación a través de un sistema de administración web y completarlas por los docentes con la aplicación móvil disponible para iOS y Android.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -219,7 +219,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "Debido a la pandemia del COVID-19 la universidad se vio en la necesidad de fortalezer a la unidad de Registro Curricular para permitir la solicitud y entrega de documentos escenciales para los estudiantes de manera no presencial.",
+    "description": "Debido a la pandemia del COVID-19 la universidad se vio en la necesidad de fortalecer a la unidad de Registro Curricular para permitir la solicitud y entrega de documentos esenciales para los estudiantes de manera no presencial. El sistema permite realizar el proceso completo desde la solicitud por parte del estudiante, la recepción del pago (a través de Webpay) y la entrega del documento digital generado automáticamente.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -235,7 +235,7 @@
     "company": "Universidad Católica del Norte",
     "companyUrl": "https://www.ucn.cl",
     "companyImgUrl": "/images/ucn-logo192.png",
-    "description": "El sistema permite la definición de programas de especialización en distintos niveles para académicos, agregar participantes y realizar el seguimiento del las competencias definidas por nivel.",
+    "description": "El sistema permite la definición de programas de especialización en distintos niveles para académicos, agregar participantes y realizar el seguimiento de las competencias definidas por nivel, el cual es calculado de manera automática en base a los cursos aprobados registrados para el académico como aprobados y la validación de sus conocimientos previos.",
     "techList": [
       "Javascript (ES6+)",
       "React",
@@ -251,7 +251,7 @@
     "company": "Asesoría Laboral y Sindical",
     "companyUrl": "https://als.cl/",
     "companyImgUrl": "/images/logo-als.png",
-    "description": "Digitalización de los procesos de gestión para la empresa ALS. El objetivo principal es permitir llevar un seguimiento del estado para cada uno de los juicios, facilitando al administrador registrar la parte contable asociada. Como adicional se incorporo la calendarización de los eventos por juicio con el envio de la invitación por correo a los participantes asociados.",
+    "description": "Digitalización de los procesos de gestión para la empresa ALS. El objetivo principal es permitir llevar un seguimiento del estado para cada uno de los juicios, facilitando al administrador registrar la parte contable asociada. Como adicional se incorporó la calendarización de los eventos por juicio con el envió de la invitación por correo a los participantes asociados.",
     "techList": [
       "Javascript (ES6+)",
       "React",
