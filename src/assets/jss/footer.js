@@ -1,10 +1,10 @@
+import { FOOTER_HEIGHT } from './theme';
+
 const footerStyles = {
-  container: theme => ({
-    backgroundColor: theme.palette.primary.dark,
-    padding: 1,
-    bottom: 0,
-    top: 'auto'
-  }),
+  container: {
+    minHeight: FOOTER_HEIGHT,
+    padding: 2
+  },
   iconContainer: {
     paddingX: 3
   },

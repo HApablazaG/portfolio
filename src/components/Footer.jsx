@@ -11,8 +11,7 @@ function Footer () {
     <AppBar
       sx={footerStyles.container}
       component="footer"
-      position="fixed"
-      elevation={0}
+      position="static"
     >
       <Grid
         spacing={1}
