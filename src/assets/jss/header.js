@@ -2,9 +2,12 @@ const headerStyles = {
   logo: theme => ({
     position: 'absolute',
     display: 'block',
-    fontSize: '5rem',
-    margin: 1,
-    color: theme.palette.primary.contrastText
+    margin: theme.spacing(1),
+    color: theme.palette.primary.contrastText,
+    fontSize: 90,
+    [theme.breakpoints.down('md')]: {
+      fontSize: 70
+    }
   }),
   menuIcon: theme => ({
     position: 'fixed',

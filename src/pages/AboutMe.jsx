@@ -82,7 +82,6 @@ function AboutMe (props) {
               iconStyles={aboutStyles.mediaIcon}
             />
           </Grid>
-
         </Grid>
       </Grid>
     </SectionBase>

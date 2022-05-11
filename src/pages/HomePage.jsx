@@ -7,6 +7,7 @@ import {
   Grid,
   Typography
 } from '@mui/material';
+import { MediaLinkContainer } from '../components';
 
 function HomePage (props) {
   const { id } = props;
@@ -50,6 +51,16 @@ function HomePage (props) {
               invito a que continues leyendo para conocer más sobre mi perfil profesional.
             </Typography>
           </CardContent>
+
+          <Grid
+            justifyContent="flex-end"
+            container
+          >
+            <MediaLinkContainer
+              linkStyles={homeStyles.iconContainer}
+              iconStyles={homeStyles.mediaIcon}
+            />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
