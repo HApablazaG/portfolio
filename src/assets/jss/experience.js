@@ -7,9 +7,12 @@ const experienceStyles = {
       }
     }
   }),
-  oppositeContent: {
-    margin: 'auto 0'
-  },
+  oppositeContent: theme => ({
+    margin: 'auto 0',
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    }
+  }),
   itemButton: ({ theme, isActive }) => ({
     marginY: theme.spacing(1),
     padding: theme.spacing(0.5),
@@ -27,10 +30,13 @@ const experienceStyles = {
   avatarImg: {
     objectFit: 'contain'
   },
-  content: {
-    py: 1.5,
-    px: 2
-  },
+  content: theme => ({
+    paddingY: 1.5,
+    paddingX: 2,
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    }
+  }),
   cardAvatar: {
     width: 'auto',
     height: 70

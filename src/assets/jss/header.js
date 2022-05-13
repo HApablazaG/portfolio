@@ -12,6 +12,7 @@ const headerStyles = {
   menuIcon: theme => ({
     position: 'fixed',
     right: 0,
+    zIndex: 500,
     backgroundColor: theme.palette.primary.contrastText,
     color: theme.palette.primary.main,
     margin: 1,

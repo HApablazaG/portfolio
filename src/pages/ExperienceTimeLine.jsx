@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useTheme, styled } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { styled } from '@mui/material/styles';
 import {
   Avatar,
   Box,
@@ -201,13 +200,11 @@ function ExperienceTimeLine (props) {
     }
   ]);
   const [selected, setSelected] = useState(contentList[0]);
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <SectionBase id={id} title="Experiencia Laboral">
       <Grid alignItems="center" container>
-        <Grid xs={3} md={2} lg={6} item>
+        <Grid xs={3} sm={2} md={6} item>
           <Timeline position="left">
             {
               contentList.map(content => {
@@ -220,18 +217,14 @@ function ExperienceTimeLine (props) {
                     key={`timeline-item-${content.id}`}
                     sx={experienceStyles.timelineItem}
                   >
-                    {
-                      matches && (
-                        <TimelineOppositeContent
-                          sx={experienceStyles.oppositeContent}
-                          align="right"
-                          variant="body2"
-                          color="text.secondary"
-                        >
-                          { content.timeLapse }
-                        </TimelineOppositeContent>
-                      )
-                    }
+                    <TimelineOppositeContent
+                      sx={experienceStyles.oppositeContent}
+                      align="right"
+                      variant="body2"
+                      color="text.secondary"
+                    >
+                      { content.timeLapse }
+                    </TimelineOppositeContent>
 
                     <TimelineSeparator>
                       <TimelineConnector />
@@ -254,19 +247,15 @@ function ExperienceTimeLine (props) {
                       <TimelineConnector />
                     </TimelineSeparator>
 
-                    {
-                      matches && (
-                        <TimelineContent sx={experienceStyles.content}>
-                          <Typography variant="h6" component="span">
-                            { content.position }
-                          </Typography>
+                    <TimelineContent sx={experienceStyles.content}>
+                      <Typography variant="h6" component="span">
+                        { content.position }
+                      </Typography>
 
-                          <Typography>
-                            { content.company }
-                          </Typography>
-                        </TimelineContent>
-                      )
-                    }
+                      <Typography>
+                        { content.company }
+                      </Typography>
+                    </TimelineContent>
                   </TimelineItem>
                 );
               })
@@ -274,7 +263,7 @@ function ExperienceTimeLine (props) {
           </Timeline>
         </Grid>
 
-        <Grid xs={9} md={10} lg={6} item>
+        <Grid xs={9} sm={10} md={6} item>
           <Card>
             <CardHeader
               title={selected.position}
