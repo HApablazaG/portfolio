@@ -9,6 +9,19 @@ import {
 } from '@mui/material';
 import { MediaLinkContainer } from '../components';
 
+function CurrentWork () {
+  return (
+    <Typography
+      component="a"
+      color="secondary.light"
+      href="https://www.buk.cl/"
+      target="_blank"
+    >
+      buk
+    </Typography>
+  );
+}
+
 function HomePage (props) {
   const { id } = props;
 
@@ -47,7 +60,7 @@ function HomePage (props) {
             </Typography>
 
             <Typography align="justify">
-              Actualmente me encuentro en busca de oportunidades laborales, por lo que te
+              Actualmente me encuentro me encuentro trabajando en <CurrentWork />. Aun así, te
               invito a que continues leyendo para conocer más sobre mi perfil profesional.
             </Typography>
           </CardContent>

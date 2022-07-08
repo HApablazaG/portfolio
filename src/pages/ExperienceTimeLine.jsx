@@ -155,6 +155,12 @@ function getContent (contentId) {
           </Box>
         </>
       );
+    case 6:
+      return (
+        <Typography>
+          En progreso actualmente...
+        </Typography>
+      );
     default:
       return null;
   }
@@ -197,6 +203,13 @@ function ExperienceTimeLine (props) {
       company: 'Asesoría Laboral y Sindical',
       timeLapse: '12/2021 - 04/2022',
       logoImg: '/images/logo-als.png'
+    },
+    {
+      id: 6,
+      position: 'Programador Semi Senior',
+      company: 'Buk',
+      timeLapse: '07/2022 - Actualidad',
+      logoImg: '/images/logo-buk.jpg'
     }
   ]);
   const [selected, setSelected] = useState(contentList[0]);

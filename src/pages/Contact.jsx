@@ -24,8 +24,9 @@ function Contact (props) {
 
             <Typography align="justify">
               Si te intereso mi trabajo y deseas comunicarte conmigo no dudes en hacerlo,
-              actualmente me encuentro en la búsqueda de nuevas oportunidades laborales por lo
-              que estaré más que encantado de atender tus mensajes o preguntas.
+              aunque actualmente no me encuentro en la búsqueda de nuevas oportunidades laborales
+              igual estaré más que encantado de atender tus mensajes o preguntas en la medida de
+              lo posible.
             </Typography>
           </CardContent>
         </Grid>
